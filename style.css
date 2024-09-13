@@ -1,0 +1,143 @@
+:root {
+    /* Primary */
+    --moderate-violet: hsl(263, 55%, 52%);
+    --very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --white: hsl(0, 0%, 100%);
+
+    /* Neutral */
+    --light-gray: hsl(0, 0%, 81%);
+    --light-grayish-blue: hsl(210, 46%, 95%);
+
+    /* Typography */
+    --barlow: "Barlow Semi Condensed", sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--barlow);
+    color: var(--light-gray);
+    background-color: var(--light-grayish-blue);
+}
+
+h1 {
+    font-size: 24px;
+    color: var(--white);
+    position: relative;
+}
+
+h3 {
+    color: var(--white);
+    margin: 0;
+    font-size: 16px;
+}
+
+p {
+    color: var(--light-gray);
+    margin: 0;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 15px;
+    padding: 15px;
+}
+
+.avatar {
+    width: 30px;
+    height: auto;
+    border: 2px solid var(--white);
+    border-radius: 50%;
+}
+
+.main-content {
+    display: grid;
+    gap: 15px;
+}
+
+.main-content .top {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 15px;
+}
+
+.main-content .bottom {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 15px;
+}
+
+.quote-card {
+    position: relative
+}
+
+.card {
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.top .card:nth-child(1) {
+    background-color: var(--moderate-violet);
+}
+
+.top .card:nth-child(2) {
+    background-color: var(--very-dark-grayish-blue);
+}
+
+.bottom .card:nth-child(1) {
+    background-color: var(--white);
+}
+
+.bottom .card:nth-child(1) h1,
+.bottom .card:nth-child(1) h3 {
+    color: var(--very-dark-blackish-blue);
+}
+
+.bottom .card:nth-child(2) {
+    background-color: var(--very-dark-blackish-blue);
+}
+
+main .card {
+    background-color: var(--white);
+}
+
+.kira h1,
+.kira h3 {
+    color: var(--very-dark-blackish-blue);
+}
+
+.quotation {
+    position: absolute;
+    left: 50%;
+    top: 3%;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/*mobile*/
+@media screen and (max-width: 425px) {
+
+    main,
+    .main-content .top,
+    .main-content .bottom {
+        grid-template-columns: 1fr;
+    }
+}
